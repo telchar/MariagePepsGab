@@ -1,0 +1,15 @@
+﻿<nav>
+<ul>
+    @foreach(var li in (Dictionary<string, String>)ViewBag.Menu)
+    {
+        if (li.Key != (String) ViewBag.Selected)
+        {
+            <li>@Html.RouteLink(li.Value, li.Key)</li>
+        }
+        else
+        {
+            <li class="selected">@Html.RouteLink(li.Value, li.Key)</li>
+        }
+    }
+</ul>
+</nav>

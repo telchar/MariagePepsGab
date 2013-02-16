@@ -1,0 +1,21 @@
+﻿@model Mariage.Models.ContactModel
+@{
+    ViewBag.Title = "Contact";
+}
+
+<h2>Contact</h2>
+@{ Html.EnableClientValidation(); }
+
+@Html.BeginForm()
+<fieldset>
+    <legend>Nous contacter</legend>
+    <div class="editor-label">@Html.LabelFor(m => m.Email)</div>
+    <div class="editor-field">@Html.EditorFor(m => m.Email)</div>
+    <div class="editor-label">@Html.LabelFor(m => m.Sujet)</div>
+    <div class="editor-field">@Html.EditorFor(m => m.Sujet)</div>
+    <div class="editor-label">@Html.LabelFor(m => m.Files)</div>
+    <div class="editor-field">@Html.EditorFor(m => m.Files)</div>
+    <div class="editor-label">@Html.LabelFor(m => m.Message)</div>
+    <div class="editor-field">@Html.TextAreaFor(m => m.Message)</div>
+    <p><input type="submit" value="Envoyer" /></p>
+</fieldset>
