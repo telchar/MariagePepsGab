@@ -98,56 +98,94 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'KingthingsCalligraphicaLight';
+    src: url('Kingthings_Calligraphica_Light-webfont.eot');
+    src: url('Kingthings_Calligraphica_Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Kingthings_Calligraphica_Light-webfont.woff') format('woff'),
+         url('Kingthings_Calligraphica_Light-webfont.ttf') format('truetype'),
+         url('Kingthings_Calligraphica_Light-webfont.svg#KingthingsCalligraphicaLight') format('svg');
+    font-weight: normal;
+    font-style: normal;
 
+}
+@font-face {
+    font-family: 'KingthingsCalligraphica2Rg';
+    src: url('Kingthings_Calligraphica_2-webfont.eot');
+    src: url('Kingthings_Calligraphica_2-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Kingthings_Calligraphica_2-webfont.woff') format('woff'),
+         url('Kingthings_Calligraphica_2-webfont.ttf') format('truetype'),
+         url('Kingthings_Calligraphica_2-webfont.svg#KingthingsCalligraphica2Rg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'KingthingsCalligCalligraphica';
+    src: url('Kingthings_Calligraphica_Italic-webfont.eot');
+    src: url('Kingthings_Calligraphica_Italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Kingthings_Calligraphica_Italic-webfont.woff') format('woff'),
+         url('Kingthings_Calligraphica_Italic-webfont.ttf') format('truetype'),
+         url('Kingthings_Calligraphica_Italic-webfont.svg#KingthingsCalligCalligraphica') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
 body
 {
-    font-size: .85em;
+    font-size: 1em;
     font-family: "OpenSansRegular", Helvetica, Arial, Sans-Serif;
-    color: #232323;
-    background-color: #677E52;
+    color: #eeeeee;
+    background-color: #2b4216;
 }
-
 header,
 footer,
 nav,
-section {
+section,
+#content {
     display: block;
+    width: 960px;
+    margin: 0 auto;
+    padding: 0;
+}
+#content {
+    color: #311a0e;
+    box-shadow: 3px 3px 3px #222;
+}
+ul, li, h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#content {
+    background: #eee8d3;
 }
 
-#content {
-    background: #FCFAE1 url('images/papier-paille.jpg') repeat top left;
+a:link {
+    color: #ffeeee;
+    text-decoration: none;
+}
+a:visited {
+    color: #eedddd;
+}
+a:hover {
+    text-decoration: underline;
+    color: #dddddd; 
+}
+a:active {
+    text-decoration: underline;
+    color: #eedddd
 }
 
 /* Styles for basic forms
 -----------------------------------------------------------*/
-
-fieldset 
-{
-    border:1px solid #ddd;
-    padding:0 1.4em 1.4em 1.4em;
-    margin:0 0 1.5em 0;
-}
-
-legend 
-{
-    font-size:1.2em;
-    font-weight: bold;
-}
-
 textarea 
 {
-    min-height: 75px;
+    min-height: 150px;
 }
 
-.editor-label 
+.editor-label, .editor-field, #content form p
 {
-    margin: 1em 0 0 0;
-}
-
-.editor-field 
-{
-    margin:0.5em 0 0 0;
+    margin: 0.5em 20px 0;
 }
 
 
@@ -162,6 +200,7 @@ textarea
 {
     display: none;
 }
+
 
 .input-validation-error
 {
@@ -178,4 +217,36 @@ textarea
 .validation-summary-valid
 {
     display: none;
+}
+    
+h1 {
+    font-family: "KingthingsCalligraphica2Rg", serif;
+    font-size: 3em;
+}
+#date-mariage {
+    font-family: "KingthingsCalligCalligraphica", serif;
+    font-size: 1.6em;
+    margin-bottom: 20px;
+}
+nav li {
+    font-family: "KingthingsCalligraphicaLight", serif;
+    display: inline-block;
+    background-color: #5b2f20;
+    font-size: 2em;
+    padding: 0.8em;
+    zoom: 1;
+}
+#content p {
+    margin: 0 10px;
+}
+h2 {
+    font-family: "KingthingsCalligraphicaLight", serif;
+    font-size: 2em;
+    margin: 0 10px 20px;
+    padding-top: 20px;
+}
+#slider {
+    width: 940px;
+    height: 705px;
+    margin: 0 auto;
 }

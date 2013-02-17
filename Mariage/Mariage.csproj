@@ -100,7 +100,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\images\guerande.jpg" />
     <Content Include="Content\images\papier-paille.jpg" />
+    <Content Include="Content\images\penbron.jpg" />
+    <Content Include="Content\images\vitre.jpg" />
+    <Content Include="Content\Kingthings_Calligraphica_2-webfont.svg" />
+    <Content Include="Content\Kingthings_Calligraphica_Italic-webfont.svg" />
+    <Content Include="Content\Kingthings_Calligraphica_Light-webfont.svg" />
     <Content Include="Content\OpenSans-Bold-webfont.svg" />
     <Content Include="Content\OpenSans-BoldItalic-webfont.svg" />
     <Content Include="Content\OpenSans-ExtraBold-webfont.svg" />
@@ -173,6 +179,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tooltip.min.css" />
+    <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\OpenSans-Bold-webfont.eot" />
@@ -205,7 +212,17 @@
     <Content Include="Content\OpenSans-SemiboldItalic-webfont.eot" />
     <Content Include="Content\OpenSans-SemiboldItalic-webfont.ttf" />
     <Content Include="Content\OpenSans-SemiboldItalic-webfont.woff" />
+    <Content Include="Content\Kingthings_Calligraphica_2-webfont.eot" />
+    <Content Include="Content\Kingthings_Calligraphica_2-webfont.ttf" />
+    <Content Include="Content\Kingthings_Calligraphica_2-webfont.woff" />
+    <Content Include="Content\Kingthings_Calligraphica_Italic-webfont.eot" />
+    <Content Include="Content\Kingthings_Calligraphica_Italic-webfont.ttf" />
+    <Content Include="Content\Kingthings_Calligraphica_Italic-webfont.woff" />
+    <Content Include="Content\Kingthings_Calligraphica_Light-webfont.eot" />
+    <Content Include="Content\Kingthings_Calligraphica_Light-webfont.ttf" />
+    <Content Include="Content\Kingthings_Calligraphica_Light-webfont.woff" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\easySlider1.7.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="Scripts\jquery-1.9.1.min.map" />

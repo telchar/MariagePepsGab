@@ -16,6 +16,7 @@ namespace Mariage
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+            routes.IgnoreRoute("{resource}.ico");
             routes.MapRoute(
                 "Liste",
                 "Liste",
