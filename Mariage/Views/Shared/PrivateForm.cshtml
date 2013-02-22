@@ -1,0 +1,7 @@
+﻿@using (Html.BeginForm("PrivateForm", "Mariage", FormMethod.Post, new { id = "private-form"}))
+{
+    @Html.Label("password", "Code d'accès invité")
+    @Html.TextBox("password")
+    <input type="submit" value="Acccéder" />
+    @Html.ValidationMessage("password")     
+}

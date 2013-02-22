@@ -150,6 +150,7 @@ section,
 #content {
     color: #311a0e;
     box-shadow: 3px 3px 3px #222;
+    padding-bottom: 20px;
 }
 ul, li, h1, h2, h3, h4, h5, h6, p {
     margin: 0;
@@ -229,13 +230,21 @@ h1 {
     margin-bottom: 20px;
 }
 nav li {
-    font-family: "KingthingsCalligraphicaLight", serif;
-    display: inline-block;
-    background-color: #5b2f20;
-    font-size: 2em;
-    padding: 0.8em;
-    zoom: 1;
+    display: inline;
+    padding: 0;
+    margin: 0;
 }
+    nav li a {
+        font-family: "KingthingsCalligraphicaLight", serif;
+        display: inline-block;
+        background-color: #5b2f20;
+        -moz-border-radius: 20px 20px 0 0;
+        -webkit-border-radius: 20px 20px 0 0;
+        border-radius: 20px 20px 0 0;
+        font-size: 2em;
+        padding: 0.5em 0.7em;
+        zoom: 1;
+    }
 #content p {
     margin: 0 10px;
 }

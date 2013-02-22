@@ -43,18 +43,14 @@ namespace Mariage.Controllers
             return View();
         }
 
-        public ActionResult Invite()
-        {
-            return Private ? View() : View("Index");
-        }
 
         [HttpPost]
-        public ActionResult Invite(string password)
+        public ActionResult PrivateForm(string password)
         {
             if (password.Trim().ToLower() == "gwenrann")
             {
                 Session.Add("private", true);
-                return RedirectToAction("Invite");
+                return RedirectToAction("Infos");
             }
             ModelState.AddModelError("password",
                 "Le code d'accès invité saisi n'est pas correct, vous trouverez votre code d'accès sur votre faire-part d'invitation.");
@@ -77,10 +73,17 @@ namespace Mariage.Controllers
             get
             {
                 if (Session != null)
-                    return (bool) (Session["private"] ?? false);
+                {
+                    if (Session["private"] == null)
+                    {
+                        Session.Add("private", false);
+                    }
+                    return (bool)Session["private"];
+                }
                 return false;
             }
         }
 
+        }
+
     }
-}

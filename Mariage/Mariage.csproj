@@ -257,12 +257,12 @@
     <Content Include="Views\Mariage\Index.cshtml" />
     <Content Include="Views\Mariage\Contact.cshtml" />
     <Content Include="Views\Mariage\Media.cshtml" />
-    <Content Include="Views\Mariage\Invite.cshtml" />
     <Content Include="Views\Mariage\Liste.cshtml" />
     <Content Include="Views\Mariage\404.cshtml" />
     <Content Include="Views\Shared\InviteForm.cshtml" />
     <Content Include="Views\Mariage\Infos.cshtml" />
     <Content Include="Views\Mariage\EditorTemplates\FileName.cshtml" />
+    <Content Include="Views\Shared\PrivateForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
