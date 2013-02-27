@@ -19,6 +19,10 @@ namespace Mariage.Controllers
                     {"Contact","Contact"}
                 };
         }
+        public ActionResult EnCoursDeDeveloppement()
+        {
+            return View();
+        }
         public ActionResult Index()
         {
             return View();

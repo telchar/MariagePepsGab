@@ -3,3 +3,45 @@
 }
 
 <h2>Informations</h2>
+
+<h2>La cérémonie</h2>
+
+<h3>La Mairie</h3>
+
+<p>Le mariage civil aura lieu le 10 Mai 2013 à 14h30, à la mairie de Saint-Sébastien-sur-Loire, Place Marcellin Verbe. 
+    La cérémonie sera célébré par le maire-adjoint Yves AUMON.
+</p>
+<div id="map-civil"></div>
+<h3>L'&Eacute;glise</h3>
+<p>La cérémonie religieuse se tiendra en l'église de Saint-Jean l'&Eacute;vangéliste à Saint-Sébastien-sur-Loire, route de Clisson. Elle sera célébrée par le Père Jean-Louis MAURA le 11 Mai 2013 à 14h30.</p>
+<div id="map-eglise"></div>
+@if ((Boolean) ViewBag.Private)
+{
+    <h2>La fête</h2>
+    <h3>Cocktail, Diner et Bal</h3>
+    
+    <h3>Le lendemain</h3>
+    <div id="map-fete"></div>
+    
+}
+
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYDFWltjKBDdXI4YIccB-KVlk3LyLbuAs&sensor=false">
+    </script>
+    <script type="text/javascript">
+      function initialize() {
+        var mapOptions = {
+          center: new google.maps.LatLng(-34.397, 150.644),
+          zoom: 8,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var mapcivil = new google.maps.Map(document.getElementById("map-civil"),
+            mapOptions);
+        var mapeglise = new google.maps.Map(document.getElementById("map-eglise"),
+            mapOptions);
+        var mapfete = new google.maps.Map(document.getElementById("map-fete"),
+            mapOptions);
+      }
+    </script>
+
+
