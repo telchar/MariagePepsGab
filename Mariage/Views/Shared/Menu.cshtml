@@ -1,8 +1,10 @@
-﻿<nav>
+﻿@using Mariage.Models
+@model BaseModel
+<nav>
 <ul>
-    @foreach(var li in (Dictionary<string, String>)ViewBag.Menu)
+    @foreach(var li in BaseModel.Menu)
     {
-        if (li.Key != (String) ViewBag.Selected)
+        if (li.Key != Model.Selected)
         {
             <li>@Html.RouteLink(li.Value, li.Key)</li>
         }

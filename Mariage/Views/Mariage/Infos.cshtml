@@ -1,47 +1,35 @@
-﻿@{
+﻿@using Mariage.Models
+@model Mariage.Models.BaseModel
+@{
     ViewBag.Title = "Perrine et Gabriel - 11 Mai 2013 - Informations";
 }
 
 <h2>Informations</h2>
 
-<h2>La cérémonie</h2>
+<h3>La cérémonie</h3>
 
-<h3>La Mairie</h3>
+<h4>La Mairie</h4>
 
 <p>Le mariage civil aura lieu le 10 Mai 2013 à 14h30, à la mairie de Saint-Sébastien-sur-Loire, Place Marcellin Verbe. 
     La cérémonie sera célébré par le maire-adjoint Yves AUMON.
 </p>
-<div id="map-civil"></div>
-<h3>L'&Eacute;glise</h3>
+<iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" 
+    src="https://maps.google.fr/maps?hl=fr&amp;safe=off&amp;client=firefox-a&amp;q=H%C3%B4tel+de+Ville+Saint-S%C3%A9bastien-sur-Loire&amp;ie=UTF8&amp;hq=H%C3%B4tel+de+Ville&amp;hnear=Saint-S%C3%A9bastien-sur-Loire,+Loire-Atlantique,+Pays+de+la+Loire&amp;t=m&amp;fll=47.205546,-1.498647&amp;fspn=0.012114,0.033023&amp;st=103338374097488094454&amp;rq=1&amp;ev=zi&amp;split=1&amp;ll=47.206107,-1.502466&amp;spn=0.012114,0.033023&amp;z=14&amp;iwloc=A&amp;cid=5411520102145252411&amp;output=embed"></iframe>
+<p><a href="https://maps.google.fr/maps?hl=fr&amp;safe=off&amp;client=firefox-a&amp;q=H%C3%B4tel+de+Ville+Saint-S%C3%A9bastien-sur-Loire&amp;ie=UTF8&amp;hq=H%C3%B4tel+de+Ville&amp;hnear=Saint-S%C3%A9bastien-sur-Loire,+Loire-Atlantique,+Pays+de+la+Loire&amp;t=m&amp;fll=47.205546,-1.498647&amp;fspn=0.012114,0.033023&amp;st=103338374097488094454&amp;rq=1&amp;ev=zi&amp;split=1&amp;ll=47.206107,-1.502466&amp;spn=0.012114,0.033023&amp;z=14&amp;iwloc=A&amp;cid=5411520102145252411&amp;source=embed">Agrandir le plan</a></p>
+
+<h4>L'&Eacute;glise</h4>
 <p>La cérémonie religieuse se tiendra en l'église de Saint-Jean l'&Eacute;vangéliste à Saint-Sébastien-sur-Loire, route de Clisson. Elle sera célébrée par le Père Jean-Louis MAURA le 11 Mai 2013 à 14h30.</p>
-<div id="map-eglise"></div>
-@if ((Boolean) ViewBag.Private)
+<iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" 
+    src="https://maps.google.fr/maps?q=Eglise+Saint-Jean+l'%C3%A9vang%C3%A9liste+Saint-S%C3%A9bastien-sur-Loire&amp;oe=utf-8&amp;client=firefox-a&amp;ie=UTF8&amp;hq=Eglise+Saint-Jean+l'%C3%A9vang%C3%A9liste&amp;hnear=Saint-S%C3%A9bastien-sur-Loire,+Loire-Atlantique,+Pays+de+la+Loire&amp;ll=47.192956,-1.524215&amp;spn=0.027324,0.046446&amp;t=m&amp;output=embed"></iframe>
+<p><a href="https://maps.google.fr/maps?q=Eglise+Saint-Jean+l'%C3%A9vang%C3%A9liste+Saint-S%C3%A9bastien-sur-Loire&amp;oe=utf-8&amp;client=firefox-a&amp;ie=UTF8&amp;hq=Eglise+Saint-Jean+l'%C3%A9vang%C3%A9liste&amp;hnear=Saint-S%C3%A9bastien-sur-Loire,+Loire-Atlantique,+Pays+de+la+Loire&amp;ll=47.192956,-1.524215&amp;spn=0.027324,0.046446&amp;t=m&amp;source=embed">Agrandir le plan</a></p>
+
+@if (BaseModel.Private)
 {
-    <h2>La fête</h2>
-    <h3>Cocktail, Diner et Bal</h3>
+    <h3>La fête</h3>
+    <h4>Cocktail, Diner et Bal</h4>
     
-    <h3>Le lendemain</h3>
-    <div id="map-fete"></div>
+    <h4>Le lendemain</h4>
     
 }
-
-    <script type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYDFWltjKBDdXI4YIccB-KVlk3LyLbuAs&sensor=false">
-    </script>
-    <script type="text/javascript">
-      function initialize() {
-        var mapOptions = {
-          center: new google.maps.LatLng(-34.397, 150.644),
-          zoom: 8,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-        };
-        var mapcivil = new google.maps.Map(document.getElementById("map-civil"),
-            mapOptions);
-        var mapeglise = new google.maps.Map(document.getElementById("map-eglise"),
-            mapOptions);
-        var mapfete = new google.maps.Map(document.getElementById("map-fete"),
-            mapOptions);
-      }
-    </script>
 
 

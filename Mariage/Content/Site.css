@@ -150,6 +150,7 @@ section,
 #content {
     color: #311a0e;
     box-shadow: 3px 3px 3px #222;
+    background: #eee8d3;
     padding-bottom: 20px;
 }
 ul, li, h1, h2, h3, h4, h5, h6, p {
@@ -157,22 +158,19 @@ ul, li, h1, h2, h3, h4, h5, h6, p {
     padding: 0;
     list-style: none;
 }
-#content {
-    background: #eee8d3;
-}
 
-a:link {
+nav a:link {
     color: #ffeeee;
     text-decoration: none;
 }
-a:visited {
+nav a:visited {
     color: #eedddd;
 }
-a:hover {
+nav a:hover {
     text-decoration: underline;
     color: #dddddd; 
 }
-a:active {
+nav a:active {
     text-decoration: underline;
     color: #eedddd
 }
@@ -181,14 +179,18 @@ a:active {
 -----------------------------------------------------------*/
 textarea 
 {
-    min-height: 150px;
+    min-height: 250px;
+    min-width: 500px;
 }
 
 .editor-label, .editor-field, #content form p
 {
-    margin: 0.5em 20px 0;
+    margin: 0 40px;
 }
-
+.editor-label {
+    margin-top: 0.5em;
+    font-size: 0.8em;
+}
 
 /* Styles for validation helpers
 -----------------------------------------------------------*/
@@ -246,16 +248,39 @@ nav li {
         zoom: 1;
     }
 #content p {
-    margin: 0 10px;
+    margin: 0 40px;
 }
-h2 {
+h2, h3, h4 {
     font-family: "KingthingsCalligraphicaLight", serif;
     font-size: 2em;
-    margin: 0 10px 20px;
+    margin: 0 40px 20px;
     padding-top: 20px;
+}
+h3 {
+    font-size: 1.8em;
+}
+h4 {
+    font-family: "OpenSansRegular", Helvetica, Arial, Sans-Serif;
+    font-size: 1.2em;
 }
 #slider {
     width: 940px;
     height: 705px;
     margin: 0 auto;
 }
+
+iframe {
+    border: 1px solid black;
+    width: 425px;
+    height: 350px;
+    margin: 10px 40px;
+}
+#private-form {
+    float: right;
+    width: 360px;
+    overflow: hidden;
+    font-size: 0.8em;
+}
+    #private-form label {
+        margin-right: 5px;
+    }

@@ -17,9 +17,10 @@ namespace Mariage
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
             routes.IgnoreRoute("{resource}.ico");
-            /*routes.MapRoute("Construct",
+            routes.IgnoreRoute("{resource}.txt");
+            routes.MapRoute("Construct",
                             "{*all}",
-                            new {controller = "Mariage", action = "EnCoursDeDeveloppement"}); */
+                            new {controller = "Mariage", action = "EnCoursDeDeveloppement"});
             routes.MapRoute(
                 "Liste",
                 "Liste",

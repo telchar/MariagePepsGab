@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using Mariage.Models
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="utf-8" />
@@ -12,10 +13,10 @@
 
     <body>
         <header>
+            @RenderPage("~/Views/Shared/PrivateForm.cshtml")
             <h1>Perrine et Gabriel</h1>
             <p id="date-mariage">Le 11 mai 2013 à Gwenrann</p>
-            @RenderPage("~/Views/Shared/PrivateForm.cshtml")
-            @RenderPage("~/Views/Shared/Menu.cshtml")
+            @RenderPage("~/Views/Shared/Menu.cshtml", (BaseModel)Model)
         </header>
         <div id="content">
         @RenderBody()
