@@ -40,9 +40,9 @@ namespace Mariage.Controllers
             contactModel.Selected = "Contact";
             if (contactModel.Files != null)
             {
-                if (contactModel.Files.ContentLength > 20971520)
+                if (contactModel.Files.ContentLength > 4000000)
                     ModelState.AddModelError("Files",
-                                             "La pièce jointe est trop volumineuse (20mo maximum), pour les gros fichiers prenez contact avec nous pour que nous vous convenions d'un autre mode de transfert.");
+                                             "La pièce jointe est trop volumineuse, pour les gros fichiers prenez contact avec nous pour que nous convenions d'un autre mode de transfert.");
             }
             if (ModelState.IsValid)
             {
@@ -89,6 +89,10 @@ namespace Mariage.Controllers
                 return View(_model);
             }
             return RedirectToAction("Index");
+        }
+        public ActionResult NotFound()
+        {
+            return View("404", _model);
         }
     }
 

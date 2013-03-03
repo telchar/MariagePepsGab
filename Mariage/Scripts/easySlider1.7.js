@@ -34,24 +34,24 @@
 		// default configuration properties
 		var defaults = {			
 			prevId: 		'prevBtn',
-			prevText: 		'Previous',
+			prevText: 		'Précèdente',
 			nextId: 		'nextBtn',	
-			nextText: 		'Next',
+			nextText: 		'Suivante',
 			controlsShow:	true,
 			controlsBefore:	'',
 			controlsAfter:	'',	
 			controlsFade:	true,
 			firstId: 		'firstBtn',
-			firstText: 		'First',
+			firstText: 		'Début',
 			firstShow:		false,
 			lastId: 		'lastBtn',	
-			lastText: 		'Last',
+			lastText: 		'Fin',
 			lastShow:		false,				
 			vertical:		false,
 			speed: 			800,
-			auto:			false,
-			pause:			2000,
-			continuous:		false, 
+			auto:			true,
+			pause:			6000,
+			continuous:		true, 
 			numeric: 		false,
 			numericId: 		'controls'
 		}; 
@@ -85,8 +85,8 @@
 					html += '<ol id="'+ options.numericId +'"></ol>';
 				} else {
 					if(options.firstShow) html += '<span id="'+ options.firstId +'"><a href=\"javascript:void(0);\">'+ options.firstText +'</a></span>';
-					html += ' <span id="'+ options.prevId +'"><a href=\"javascript:void(0);\">'+ options.prevText +'</a></span>';
-					html += ' <span id="'+ options.nextId +'"><a href=\"javascript:void(0);\">'+ options.nextText +'</a></span>';
+					html += '<div id="slider-control"><span id="'+ options.prevId +'"><a href=\"javascript:void(0);\"><img src=\"../Content/images/prev.png\" alt=\"'+ options.prevText +'\" /></a></span>';
+					html += ' <span id="' + options.nextId + '"><a href=\"javascript:void(0);\"><img src=\"../Content/images/next.png\" alt=\"'+ options.nextText +'\" /></a></span></div>';
 					if(options.lastShow) html += ' <span id="'+ options.lastId +'"><a href=\"javascript:void(0);\">'+ options.lastText +'</a></span>';				
 				};
 				

@@ -1,12 +1,14 @@
-﻿@model Mariage.Models.ContactModel
+﻿@using Mariage.Models
+@model ContactModel
 @{
     ViewBag.Title = "Perrine et Gabriel - 11 Mai 2013 - Contact";
 }
+<h2>Nous contacter</h2>
 <p>@Model.ConfirmMessage</p>
 @{ Html.EnableClientValidation(); }
 @using (Html.BeginForm("Contact", "Mariage", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
-    <h2>Nous contacter</h2>
+
     @Html.ValidationSummary(false)
     <div class="editor-label">@Html.LabelFor(m =>m.Email)</div>
     <div class="editor-field">@Html.EditorFor(m =>m.Email)</div>
@@ -17,5 +19,8 @@
     <div class="editor-label">@Html.LabelFor(m => m.Message)</div>
     <div class="editor-field">@Html.TextAreaFor(m => m.Message)</div>
     <p><input type="submit" value="Envoyer" /></p>
-
+}
+@if (BaseModel.Private)
+{
+    
 }

@@ -9,9 +9,9 @@ namespace Mariage.Models
         {
             var mail = new MailMessage
             {
-                From = new MailAddress("gbrl.arnaud@gmail.com"),
+                From = new MailAddress("noreply@pepsetgab.fr"),
                 Body = body,
-                Subject = subject + "Email d'envoi : " + sender,
+                Subject = subject + " - Email d'envoi : " + sender,
                 IsBodyHtml = false,
                 DeliveryNotificationOptions = DeliveryNotificationOptions.OnSuccess
             };
@@ -19,7 +19,8 @@ namespace Mariage.Models
             {
                 mail.Attachments.Add(new Attachment(file.InputStream, file.FileName));
             }
-            mail.To.Add(new MailAddress("gbrl.arnaud@gmail.com, perrine.rembry@gmail.com"));
+            mail.To.Add(new MailAddress("perrine.rembry+mariage@gmail.com"));
+            mail.To.Add(new MailAddress("gbrl.arnaud+mariage@gmail.com"));
             var smtp = new SmtpClient();
             smtp.Send(mail);
         }

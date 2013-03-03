@@ -13,7 +13,10 @@
 
     <body>
         <header>
-            @RenderPage("~/Views/Shared/PrivateForm.cshtml")
+            @if (!BaseModel.Private)
+            {
+                @RenderPage("~/Views/Shared/PrivateForm.cshtml")
+            }
             <h1>Perrine et Gabriel</h1>
             <p id="date-mariage">Le 11 mai 2013 à Gwenrann</p>
             @RenderPage("~/Views/Shared/Menu.cshtml", (BaseModel)Model)

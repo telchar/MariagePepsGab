@@ -18,17 +18,21 @@ namespace Mariage
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
             routes.IgnoreRoute("{resource}.ico");
             routes.IgnoreRoute("{resource}.txt");
-            routes.MapRoute("Construct",
+            /*routes.MapRoute("Construct",
                             "{*all}",
-                            new {controller = "Mariage", action = "EnCoursDeDeveloppement"});
+                            new {controller = "Mariage", action = "EnCoursDeDeveloppement"}); */
+            routes.MapRoute(
+                "Logements",
+                "Logements",
+                new { controller = "Mariage", action = "Logements" });
             routes.MapRoute(
                 "Liste",
                 "Liste",
                 new { controller = "Mariage", action = "Liste" });
             routes.MapRoute(
                 "Media",
-                "Media/{id}", 
-                new {controller = "Mariage", action = "Media", id = UrlParameter.Optional});
+                "Media/{id}",
+                new { controller = "Mariage", action = "Media", id = UrlParameter.Optional });
             routes.MapRoute(
                 "Contact",
                 "Contact",
@@ -38,13 +42,22 @@ namespace Mariage
                 "Infos",
                 new { controller = "Mariage", action = "Infos" });
             routes.MapRoute(
-                "Invite", 
-                "Invite", 
-                new {controller = "Mariage", action = "Invite"});
+                "Invite",
+                "Invite",
+                new { controller = "Mariage", action = "Invite" });
             routes.MapRoute(
-                "Accueil", // Nom d'itinéraire
-                "", // URL avec des paramètres
-                new { controller = "Mariage", action = "Index" } // Paramètres par défaut
+                "Accueil",
+                "",
+                new { controller = "Mariage", action = "Index" }
+            );
+            routes.MapRoute("PrivateForm",
+                "Mariage/PrivateForm",
+                new  { controller = "Mariage", action = "PrivateForm" }
+                );
+                
+            routes.MapRoute("404",
+                            "{*all}",
+                            new {controller = "Mariage", action = "NotFound"}
             );
             routes.MapRoute(
                 "Default", // Nom d'itinéraire

@@ -1,17 +1,23 @@
-﻿@{
-    ViewBag.Title = "Index";
+﻿@using Mariage.Models
+@{
+    ViewBag.Title = "Perrine et Gabriel - 11 Mai 2013 - Accueil";
 }
 
 <h2>Bienvenue sur notre site de mariage</h2>
 <div id="slider"><ul>
-                     <li><img src="../../Content/images/penbron.jpg" alt="Pen Bron" /></li>
-                     <li><img src="../../Content/images/guerande.jpg" alt="Guérande" /></li>
-                     <li><img src="../../Content/images/vitre.jpg" alt="Vitré" /></li>
+                     <li><figure><img src="../../Content/images/penbron.jpg" alt="Pen Bron" /><figcaption>Centre Marin de Pen Bron - La Turballe</figcaption></figure></li>
+                     <li><figure><img src="../../Content/images/guerande.jpg" alt="Guérande" /><figcaption>Porte Saint Michel - Guérande</figcaption></figure></li>
+                     <li><figure><img src="../../Content/images/vitre.jpg" alt="Vitré" /><figcaption>Château de Vitré</figcaption></figure></li>
                  </ul>
 </div>
 <p>Hé oui, modernité et profession de Gab oblige !<br />
 Vous trouverez ici moult informations concernant nos futures épousailles au printemps prochain notamment cartes et itinéraires conseillés pour nous rejoindre, illustrations modernes, liste de présents et notre aire de réception de pigeons e-voyageurs.</p>
-
+<p><strong>Note 1 :</strong> Si vous avez des talents musicaux et souhaitez nous en faire profiter, @Html.RouteLink("contactez-nous", "Contact") pour accompagner les chants lors de la cérémonie.</p>
+<p><strong>Note 2 :</strong> Vous proposez ou avez besoin de place dans une voiture ? @Html.RouteLink("Faites-nous signe", "Contact"), nous vous mettrons en contact avec d'autres invités.</p>
+@if (BaseModel.Private)
+{
+    <p><strong>Note 3 :</strong> Toutes les bonnes volontés sont bienvenues pour nous aider à organiser le déjeuner du retour : talents de cuisiniers, temps disponible, possibilité d'apporter des mets bien de chez vous...</p>
+}
 <script type="text/javascript">
     $(document).ready(function(){
         $("#slider").easySlider();
