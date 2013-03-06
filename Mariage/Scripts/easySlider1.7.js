@@ -1,32 +1,3 @@
-/*
- * 	Easy Slider 1.7 - jQuery plugin
- *	written by Alen Grakalic	
- *	http://cssglobe.com/post/4004/easy-slider-15-the-easiest-jquery-plugin-for-sliding
- *
- *	Copyright (c) 2009 Alen Grakalic (http://cssglobe.com)
- *	Dual licensed under the MIT (MIT-LICENSE.txt)
- *	and GPL (GPL-LICENSE.txt) licenses.
- *
- *	Built for jQuery library
- *	http://jquery.com
- *
- */
- 
-/*
- *	markup example for $("#slider").easySlider();
- *	
- * 	<div id="slider">
- *		<ul>
- *			<li><img src="images/01.jpg" alt="" /></li>
- *			<li><img src="images/02.jpg" alt="" /></li>
- *			<li><img src="images/03.jpg" alt="" /></li>
- *			<li><img src="images/04.jpg" alt="" /></li>
- *			<li><img src="images/05.jpg" alt="" /></li>
- *		</ul>
- *	</div>
- *
- */
-
 (function($) {
 
 	$.fn.easySlider = function(options){
@@ -81,43 +52,18 @@
 								
 			if(options.controlsShow){
 				var html = options.controlsBefore;				
-				if(options.numeric){
-					html += '<ol id="'+ options.numericId +'"></ol>';
-				} else {
-					if(options.firstShow) html += '<span id="'+ options.firstId +'"><a href=\"javascript:void(0);\">'+ options.firstText +'</a></span>';
-					html += '<div id="slider-control"><span id="'+ options.prevId +'"><a href=\"javascript:void(0);\"><img src=\"../Content/images/prev.png\" alt=\"'+ options.prevText +'\" /></a></span>';
-					html += ' <span id="' + options.nextId + '"><a href=\"javascript:void(0);\"><img src=\"../Content/images/next.png\" alt=\"'+ options.nextText +'\" /></a></span></div>';
-					if(options.lastShow) html += ' <span id="'+ options.lastId +'"><a href=\"javascript:void(0);\">'+ options.lastText +'</a></span>';				
-				};
-				
+				html += '<div id="slider-control"><span id="'+ options.prevId +'"><a href=\"javascript:void(0);\"><img src=\"../Content/images/prev.png\" alt=\"'+ options.prevText +'\" /></a></span>';
+				html += ' <span id="' + options.nextId + '"><a href=\"javascript:void(0);\"><img src=\"../Content/images/next.png\" alt=\"'+ options.nextText +'\" /></a></span></div>';	
 				html += options.controlsAfter;						
 				$(obj).after(html);										
 			};
 			
-			if(options.numeric){									
-				for(var i=0;i<s;i++){						
-					$(document.createElement("li"))
-						.attr('id',options.numericId + (i+1))
-						.html('<a rel='+ i +' href=\"javascript:void(0);\">'+ (i+1) +'</a>')
-						.appendTo($("#"+ options.numericId))
-						.click(function(){							
-							animate($("a",$(this)).attr('rel'),true);
-						}); 												
-				};							
-			} else {
 				$("a","#"+options.nextId).click(function(){		
 					animate("next",true);
 				});
 				$("a","#"+options.prevId).click(function(){		
 					animate("prev",true);				
-				});	
-				$("a","#"+options.firstId).click(function(){		
-					animate("first",true);
-				});				
-				$("a","#"+options.lastId).click(function(){		
-					animate("last",true);				
-				});				
-			};
+				});
 			
 			function setCurrent(i){
 				i = parseInt(i)+1;
@@ -148,12 +94,6 @@
 						case "prev":
 							t = (t<=0) ? (options.continuous ? t-1 : 0) : t-1;
 							break; 
-						case "first":
-							t = 0;
-							break; 
-						case "last":
-							t = ts;
-							break; 
 						default:
 							t = dir;
 							break; 
@@ -177,17 +117,13 @@
 					if(!options.continuous && options.controlsFade){					
 						if(t==ts){
 							$("a","#"+options.nextId).hide();
-							$("a","#"+options.lastId).hide();
 						} else {
-							$("a","#"+options.nextId).show();
-							$("a","#"+options.lastId).show();					
+							$("a","#"+options.nextId).show();	
 						};
 						if(t==0){
 							$("a","#"+options.prevId).hide();
-							$("a","#"+options.firstId).hide();
 						} else {
 							$("a","#"+options.prevId).show();
-							$("a","#"+options.firstId).show();
 						};					
 					};				
 					
@@ -207,13 +143,10 @@
 				timeout = setTimeout(function(){
 					animate("next",false);
 				},options.pause);
-			};		
-			
-			if(options.numeric) setCurrent(0);
+			};
 		
 			if(!options.continuous && options.controlsFade){					
-				$("a","#"+options.prevId).hide();
-				$("a","#"+options.firstId).hide();				
+				$("a","#"+options.prevId).hide();			
 			};				
 			
 		});

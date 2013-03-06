@@ -229,7 +229,9 @@
     <Content Include="Content\Kingthings_Calligraphica_Light-webfont.ttf" />
     <Content Include="Content\Kingthings_Calligraphica_Light-webfont.woff" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\easyslider.min.js" />
     <Content Include="Scripts\easySlider1.7.js" />
+    <Content Include="Scripts\html5shiv.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="Scripts\jquery-1.9.1.min.map" />
@@ -239,6 +241,7 @@
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Content\site.min.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
